@@ -10,16 +10,24 @@ import UIKit
 import CoreData
 
 class ViewController: UIViewController {
+    
     private static let lineEntityName = "Line"
     private static let lineNumberKey = "lineNumber"
     private static let lineTextKey = "lineText"
     
     @IBOutlet var lineFields:[UITextField]!
 
+
+    @IBOutlet weak var editBtn: UIButton!
+    @IBOutlet weak var doneBtn: UIButton!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        editBtn.isEnabled = true
+        doneBtn.isEnabled = false
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.managedObjectContext
@@ -72,10 +80,31 @@ class ViewController: UIViewController {
     }
     
 
+  
+    @IBAction func editButton(_ sender: UIButton) {
+        for i in 0 ..< lineFields.count {
+            self.lineFields[i].isEnabled = true
+
+        }
+        editBtn.isEnabled = false
+        doneBtn.isEnabled = true
+
+    }
+    
+    @IBAction func doneButton(_ sender: UIButton) {
+        for i in 0 ..< lineFields.count {
+            self.lineFields[i].isEnabled = false
+        }
+        editBtn.isEnabled = true
+        doneBtn.isEnabled = false
+        
+    }
+ 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
 
 }
