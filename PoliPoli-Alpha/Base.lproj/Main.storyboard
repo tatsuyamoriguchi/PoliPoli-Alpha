@@ -237,23 +237,6 @@
             </objects>
             <point key="canvasLocation" x="970" y="86"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="ggM-L8-IjQ">
-            <objects>
-                <viewController id="kdw-Ds-pke" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UUL-KO-ltm"/>
-                        <viewControllerLayoutGuide type="bottom" id="T38-pO-cld"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Agh-8c-ndL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hHq-Ej-c2G" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
         <image name="PoliPoli Logo" width="60" height="61"/>
