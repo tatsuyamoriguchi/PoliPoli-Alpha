@@ -99,6 +99,12 @@ class ViewController: UIViewController {
         doneBtn.isEnabled = false
         
     }
+    
+    @IBAction func taskButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "taskSegue", sender: self)
+        
+    }
+    
  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
